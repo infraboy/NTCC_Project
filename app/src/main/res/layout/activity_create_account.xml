@@ -102,7 +102,7 @@
         android:textColor="#038cfc"
         android:clickable="true"
         android:id="@+id/createAcc"
-        android:onClick="signIn"/>
+        android:onClick="signUp"/>
 
     <Space
         android:layout_width="match_parent"

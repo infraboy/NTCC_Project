@@ -32,15 +32,14 @@
         android:hint="Password"
         android:background="@drawable/edit_text_outline"
         android:padding="15dp"
-        android:id="@+id/p"/>
+        android:inputType="textPassword"
+        android:id="@+id/password"/>
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Show Password"
-        android:id="@+id/showPass"
-        android:clickable="true"
-        android:onClick="showPassword"/>
+        android:id="@+id/showPass"/>
 
     <Space
         android:layout_width="match_parent"

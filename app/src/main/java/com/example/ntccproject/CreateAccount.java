@@ -15,7 +15,7 @@ public class CreateAccount extends AppCompatActivity {
         setContentView(R.layout.activity_create_account);
     }
 
-    public void signIn(View view) {
+    public void signUp(View view) {
         Intent i = new Intent(CreateAccount.this, MainActivity.class);
         startActivity(i);
         finish();
