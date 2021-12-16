@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".CreateAccount"
     android:orientation="vertical"
     android:layout_marginHorizontal="20dp">
 
@@ -12,6 +12,34 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="10"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:background="@drawable/edit_text_outline"
+        android:padding="15dp"
+        android:id="@+id/name"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:background="@drawable/edit_text_outline"
+        android:padding="15dp"
+        android:inputType="textEmailAddress"
+        android:id="@+id/email"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"/>
+
 
     <EditText
         android:layout_width="match_parent"
@@ -32,26 +60,34 @@
         android:hint="Password"
         android:background="@drawable/edit_text_outline"
         android:padding="15dp"
-        android:id="@+id/password"
-        android:inputType="textPassword"/>
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Show Password"
-        android:id="@+id/showPass"/>
+        android:inputType="textPassword"
+        android:id="@+id/password"/>
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"/>
+        android:layout_weight="0.8"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirm Password"
+        android:background="@drawable/edit_text_outline"
+        android:padding="15dp"
+        android:inputType="textPassword"
+        android:id="@+id/confirmPass"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="SIGN IN"
-        android:id="@+id/signIn"/>
+        android:text="SIGN UP"
+        android:id="@+id/signUp"/>
 
     <Space
         android:layout_width="match_parent"
@@ -61,15 +97,16 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Don't have an account? Create a new account"
+        android:text="Already have an account? Sign In"
         android:layout_gravity="center"
         android:textColor="#038cfc"
         android:clickable="true"
         android:id="@+id/createAcc"
-        android:onClick="createAccount"/>
+        android:onClick="signIn"/>
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="10"/>
+
 </androidx.appcompat.widget.LinearLayoutCompat>
