@@ -51,7 +51,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="SIGN IN"
-        android:id="@+id/signIn"/>
+        android:id="@+id/signIn"
+        android:onClick="signIn"/>
 
     <Space
         android:layout_width="match_parent"

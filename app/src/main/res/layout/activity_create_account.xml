@@ -87,7 +87,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="SIGN UP"
-        android:id="@+id/signUp"/>
+        android:id="@+id/signUp"
+        android:onClick="signUp"/>
 
     <Space
         android:layout_width="match_parent"
@@ -102,7 +103,7 @@
         android:textColor="#038cfc"
         android:clickable="true"
         android:id="@+id/createAcc"
-        android:onClick="signUp"/>
+        android:onClick="goToSignIn"/>
 
     <Space
         android:layout_width="match_parent"
