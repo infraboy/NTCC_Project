@@ -5,104 +5,124 @@
     android:layout_height="match_parent"
     tools:context=".CreateAccount"
     android:orientation="vertical"
-    android:layout_marginHorizontal="20dp">
+    android:background="@color/light_gray">
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="10"/>
 
-    <EditText
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Name"
-        android:background="@drawable/edit_text_outline"
-        android:padding="15dp"
-        android:id="@+id/name"/>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.8"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email"
-        android:background="@drawable/edit_text_outline"
-        android:padding="15dp"
-        android:inputType="textEmailAddress"
-        android:id="@+id/email"/>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.8"/>
-
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Username"
-        android:background="@drawable/edit_text_outline"
-        android:padding="15dp"
-        android:id="@+id/username"/>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.8"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Password"
-        android:background="@drawable/edit_text_outline"
-        android:padding="15dp"
-        android:inputType="textPassword"
-        android:id="@+id/password"/>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.8"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Confirm Password"
-        android:background="@drawable/edit_text_outline"
-        android:padding="15dp"
-        android:inputType="textPassword"
-        android:id="@+id/confirmPass"/>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.8"/>
-
-    <Button
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="SIGN UP"
-        android:id="@+id/signUp"
-        android:onClick="signUp"/>
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="40dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/layout_outline_shape"
+        android:outlineProvider="bounds"
+        android:elevation="30dp">
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="30dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Already have an account? Sign In"
-        android:layout_gravity="center"
-        android:textColor="#038cfc"
-        android:clickable="true"
-        android:id="@+id/createAcc"
-        android:onClick="goToSignIn"/>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:background="@drawable/edit_text_outline"
+            android:padding="15dp"
+            android:id="@+id/name"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:background="@drawable/edit_text_outline"
+            android:padding="15dp"
+            android:inputType="textEmailAddress"
+            android:id="@+id/email"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:background="@drawable/edit_text_outline"
+            android:padding="15dp"
+            android:id="@+id/username"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:background="@drawable/edit_text_outline"
+            android:padding="15dp"
+            android:inputType="textPassword"
+            android:id="@+id/password"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirm Password"
+            android:background="@drawable/edit_text_outline"
+            android:padding="15dp"
+            android:inputType="textPassword"
+            android:id="@+id/confirmPass"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="SIGN UP"
+            android:id="@+id/signUp"
+            android:onClick="signUp"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? Sign In"
+            android:layout_gravity="center"
+            android:textColor="#038cfc"
+            android:clickable="true"
+            android:id="@+id/createAcc"
+            android:onClick="goToSignIn"/>
+    </LinearLayout>
 
     <Space
         android:layout_width="match_parent"
