@@ -43,11 +43,25 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
+    public void showToast(String msg) {
+        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+    }
+
+    private boolean validate() {
+        if(username.getText().toString().isEmpty() || password.getText().toString().isEmpty()) {
+            showToast("Field(s) cannot be empty");
+            return false;
+        }
+        return true;
+    }
+
     public void signIn(View view) {
+        if(!validate())
+            return;
         SharedPreferences sharedPreferences = getSharedPreferences("Accounts", MODE_PRIVATE);
         Set<String> accDetails = sharedPreferences.getStringSet(username.getText().toString(), new HashSet<String>());
         if (accDetails.isEmpty()) {
-            Toast.makeText(getApplicationContext(),"Username not found!!", Toast.LENGTH_LONG).show();
+            showToast("Username not found!!");
             return;
         }
         Map<String, String> details = new HashMap<>();
@@ -56,9 +70,12 @@ public class MainActivity extends AppCompatActivity {
             details.put(items[0], items[1]);
         }
         if (details.get("password").equals(password.getText().toString())) {
-            Toast.makeText(getApplicationContext(),"Logged In", Toast.LENGTH_LONG).show();
+            showToast("Signed In");
+            Intent i = new Intent(MainActivity.this, Home_Page.class);
+            startActivity(i);
+            finish();
         } else {
-            Toast.makeText(getApplicationContext(),"Password is incorrect!!", Toast.LENGTH_LONG).show();
+            showToast("Password is incorrect!!");
         }
     }
 }

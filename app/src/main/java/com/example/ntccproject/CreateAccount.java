@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -28,7 +29,25 @@ public class CreateAccount extends AppCompatActivity {
         confirmPass = findViewById(R.id.confirmPass);
     }
 
+    public void showToast(String msg) {
+        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+    }
+
+    private boolean validate() {
+        if (name.getText().toString().isEmpty() || email.getText().toString().isEmpty() || username.getText().toString().isEmpty() || password.getText().toString().isEmpty() || confirmPass.getText().toString().isEmpty()) {
+            showToast("Field(s) cannot be empty");
+            return false;
+        }
+        if (!password.getText().toString().equals(confirmPass.getText().toString())) {
+            showToast("Passwords do not match!!");
+            return false;
+        }
+        return true;
+    }
+
     public void signUp(View view) {
+        if (!validate())
+            return;
         SharedPreferences sharedPreferences = getSharedPreferences("Accounts", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         Set<String> accDetails = new HashSet<String>();
@@ -37,6 +56,7 @@ public class CreateAccount extends AppCompatActivity {
         accDetails.add("email\n" + email.getText().toString());
         editor.putStringSet(username.getText().toString(), accDetails);
         editor.commit();
+        showToast("Account Created");
         Intent i = new Intent(CreateAccount.this, MainActivity.class);
         startActivity(i);
         finish();
