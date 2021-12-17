@@ -10,8 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NTCCProject">
         <activity
-            android:name=".Home_Page"
-            android:exported="false" />
+            android:name=".TodoList"
+            android:exported="false"
+            android:label="@string/title_activity_todo_list" />
         <activity
             android:name=".CreateAccount"
             android:exported="false" />

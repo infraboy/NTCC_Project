@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         }
         if (details.get("password").equals(password.getText().toString())) {
             showToast("Signed In");
-            Intent i = new Intent(MainActivity.this, Home_Page.class);
+            Intent i = new Intent(MainActivity.this, TodoList.class);
             startActivity(i);
             finish();
         } else {

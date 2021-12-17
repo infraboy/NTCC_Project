@@ -4,10 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ayush/AndroidStudioProjects/NTCCProject/app/src/main/res/drawable/edit_text_outline.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/ayush/AndroidStudioProjects/NTCCProject/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/ayush/AndroidStudioProjects/NTCCProject/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/ayush/AndroidStudioProjects/NTCCProject/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/ayush/AndroidStudioProjects/NTCCProject/app/src/main/res/drawable/layout_outline_shape.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/ayush/AndroidStudioProjects/NTCCProject/app/src/main/res/layout/activity_create_account.xml" value="0.3625" />
         <entry key="..\:/Users/ayush/AndroidStudioProjects/NTCCProject/app/src/main/res/layout/activity_home_page.xml" value="0.33" />
         <entry key="..\:/Users/ayush/AndroidStudioProjects/NTCCProject/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/Users/ayush/AndroidStudioProjects/NTCCProject/app/src/main/res/layout/activity_todo_list.xml" value="0.3625" />
+        <entry key="..\:/Users/ayush/AndroidStudioProjects/NTCCProject/app/src/main/res/layout/fragment_dashboard.xml" value="0.3625" />
+        <entry key="..\:/Users/ayush/AndroidStudioProjects/NTCCProject/app/src/main/res/layout/fragment_home.xml" value="0.3625" />
+        <entry key="..\:/Users/ayush/AndroidStudioProjects/NTCCProject/app/src/main/res/layout/fragment_notifications.xml" value="0.3625" />
       </map>
     </option>
   </component>
