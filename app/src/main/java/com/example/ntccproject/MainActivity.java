@@ -20,12 +20,20 @@ public class MainActivity extends AppCompatActivity {
 
     private CheckBox showPass;
     private EditText username, password;
+    private SharedPreferences account;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        account = getSharedPreferences("Accounts", MODE_PRIVATE);
+        if(account.getString("LoggedIn", "0\n").split("\n")[0].equals("1")) {
+            showToast("Signed In");
+            Intent i = new Intent(MainActivity.this, Home_Page.class);
+            startActivity(i);
+            finish();
+        }
         showPass = findViewById(R.id.showPass);
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
@@ -58,8 +66,7 @@ public class MainActivity extends AppCompatActivity {
     public void signIn(View view) {
         if(!validate())
             return;
-        SharedPreferences sharedPreferences = getSharedPreferences("Accounts", MODE_PRIVATE);
-        Set<String> accDetails = sharedPreferences.getStringSet(username.getText().toString(), new HashSet<String>());
+        Set<String> accDetails = account.getStringSet(username.getText().toString(), new HashSet<String>());
         if (accDetails.isEmpty()) {
             showToast("Username not found!!");
             return;
@@ -70,6 +77,9 @@ public class MainActivity extends AppCompatActivity {
             details.put(items[0], items[1]);
         }
         if (details.get("password").equals(password.getText().toString())) {
+            SharedPreferences.Editor editor = account.edit();
+            editor.putString("LoggedIn", "1\n" + username.getText().toString());
+            editor.commit();
             showToast("Signed In");
             Intent i = new Intent(MainActivity.this, Home_Page.class);
             startActivity(i);
@@ -77,5 +87,11 @@ public class MainActivity extends AppCompatActivity {
         } else {
             showToast("Password is incorrect!!");
         }
+    }
+
+    public void forgotPassword(View view) {
+        Intent i = new Intent(MainActivity.this, ForgotPassword.class);
+        startActivity(i);
+        finish();
     }
 }

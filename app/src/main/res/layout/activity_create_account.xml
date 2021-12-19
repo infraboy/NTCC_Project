@@ -78,6 +78,18 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="What is your favorite color?"
+            android:background="@drawable/edit_text_outline"
+            android:padding="15dp"
+            android:id="@+id/question"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:hint="Password"
             android:background="@drawable/edit_text_outline"
             android:padding="15dp"
