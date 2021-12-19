@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Exam_DBMS">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/layout_outline_shape"
+            android:outlineProvider="bounds"
+            android:elevation="30dp"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="EXAMINATION PORTAL - DBMS"
+                android:layout_gravity="center"
+                android:textSize="25dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Q1. Which of the following is generally used for performing tasks like creating the structure of the relations, deleting relation?"
+                android:layout_gravity="center"
+                android:id="@+id/Question"
+                android:textSize="20dp"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A) DML(Data Manipulation Language)"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:id="@+id/A" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="B) Query"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:id="@+id/B" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="C) Relational Schema"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:id="@+id/C" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="D) DDL(Data Definition Language)"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:id="@+id/D" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUBMIT"
+            android:layout_gravity="center"
+            android:id="@+id/Submit" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLEAR SELECTION"
+            android:layout_gravity="center"
+            android:id="@+id/Clear"
+            android:onClick="Clear"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="Score: 0/6"
+            android:layout_gravity="center"
+            android:id="@+id/Result"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text=""
+            android:layout_gravity="center"
+            android:id="@+id/Correct"
+            android:textSize="20dp"/>
+    </LinearLayout>
+</ScrollView>

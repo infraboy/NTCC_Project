@@ -37,10 +37,10 @@
             android:layout_width="match_parent"
             android:layout_height="30dp"/>
 
-        <View
+        <ImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:background="@android:color/holo_orange_dark"
+            android:background="@mipmap/amity_logo"
             android:layout_gravity="center"/>
 
         <Space

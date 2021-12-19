@@ -57,6 +57,8 @@ public class CreateAccount extends AppCompatActivity {
         accDetails.add("email\n" + email.getText().toString());
         accDetails.add("question\n" + question.getText().toString());
         accDetails.add("payment\n0");
+        accDetails.add("dbms\n-1");
+        accDetails.add("it307\n-1");
         editor.putStringSet(username.getText().toString(), accDetails);
         editor.commit();
         showToast("Account Created");

@@ -31,7 +31,8 @@ public class Home_Page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
         account = getSharedPreferences("Accounts", MODE_PRIVATE);
-        accDetails = account.getStringSet(account.getString("LoggedIn", "0\n").split("\n")[1], new HashSet<String>());
+        String username = account.getString("LoggedIn", "0\n").split("\n")[1];
+        accDetails = account.getStringSet(username, new HashSet<String>());
         Map<String, String> details = new HashMap<>();
         for (String item:accDetails) {
             String[] items = item.split("\n");
@@ -46,6 +47,22 @@ public class Home_Page extends AppCompatActivity {
             payFees.setEnabled(false);
             payFees.setBackgroundColor(Color.GRAY);
             payFees.setTextColor(Color.DKGRAY);
+        }
+        if (Integer.parseInt(details.get("dbms")) >= 0) {
+            TextView dbms = findViewById(R.id.dbms);
+            dbms.setText(details.get("dbms") + "/6");
+            Button dbmsButton = findViewById(R.id.dbmsButton);
+            dbmsButton.setEnabled(false);
+            dbmsButton.setBackgroundColor(Color.GRAY);
+            dbmsButton.setTextColor(Color.DKGRAY);
+        }
+        if (Integer.parseInt(details.get("it307")) >= 0) {
+            TextView it307 = findViewById(R.id.it307);
+            it307.setText(details.get("it307") + "/6");
+            Button it307Button = findViewById(R.id.it307Button);
+            it307Button.setEnabled(false);
+            it307Button.setBackgroundColor(Color.GRAY);
+            it307Button.setTextColor(Color.DKGRAY);
         }
     }
 
@@ -71,6 +88,18 @@ public class Home_Page extends AppCompatActivity {
 
     public void pay(View view) {
         Intent i = new Intent(Home_Page.this, FeePayment.class);
+        startActivity(i);
+        finish();
+    }
+
+    public void dbms(View view) {
+        Intent i = new Intent(Home_Page.this, Exam_DBMS.class);
+        startActivity(i);
+        finish();
+    }
+
+    public void it307(View view) {
+        Intent i = new Intent(Home_Page.this, Exam_IT307.class);
         startActivity(i);
         finish();
     }

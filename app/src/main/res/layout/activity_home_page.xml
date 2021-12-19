@@ -96,7 +96,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Exam Details"
+            android:text="Exam Marks"
             android:textStyle="bold"
             android:textSize="18dp"
             android:textColor="@color/black"
@@ -120,7 +120,8 @@
                 android:textStyle="bold"
                 android:textSize="18dp"
                 android:textColor="@color/white"
-                android:layout_marginRight="10dp"/>
+                android:layout_marginRight="10dp"
+                android:id="@+id/dbms"/>
         </LinearLayout>
         <Button
             android:layout_width="wrap_content"
@@ -128,7 +129,42 @@
             android:text="Give DBMS Exam"
             android:textColor="@color/teal_700"
             android:textStyle="bold"
-            android:backgroundTint="@color/white"/>
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/white"
+            android:onClick="dbms"
+            android:id="@+id/dbmsButton"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IT307:"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:layout_marginRight="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exam Not Given"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:layout_marginRight="10dp"
+                android:id="@+id/it307"/>
+        </LinearLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Give IT307 Exam"
+            android:textColor="@color/teal_700"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/white"
+            android:onClick="it307"
+            android:id="@+id/it307Button"/>
     </LinearLayout>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
