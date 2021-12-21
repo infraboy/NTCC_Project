@@ -48,7 +48,7 @@ public class Home_Page extends AppCompatActivity {
             payFees.setBackgroundColor(Color.GRAY);
             payFees.setTextColor(Color.DKGRAY);
         }
-        if (Integer.parseInt(details.get("dbms")) >= 0) {
+        if (Integer.parseInt(details.get("dbms")) >= -4 && Integer.parseInt(details.get("dbms")) != -1) {
             TextView dbms = findViewById(R.id.dbms);
             dbms.setText(details.get("dbms") + "/6");
             Button dbmsButton = findViewById(R.id.dbmsButton);
@@ -56,7 +56,7 @@ public class Home_Page extends AppCompatActivity {
             dbmsButton.setBackgroundColor(Color.GRAY);
             dbmsButton.setTextColor(Color.DKGRAY);
         }
-        if (Integer.parseInt(details.get("it307")) >= 0) {
+        if (Integer.parseInt(details.get("it307")) >= -4 && Integer.parseInt(details.get("it307")) != -1) {
             TextView it307 = findViewById(R.id.it307);
             it307.setText(details.get("it307") + "/6");
             Button it307Button = findViewById(R.id.it307Button);

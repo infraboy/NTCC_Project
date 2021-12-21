@@ -51,7 +51,12 @@ public class CreateAccount extends AppCompatActivity {
             return;
         SharedPreferences sharedPreferences = getSharedPreferences("Accounts", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        Set<String> accDetails = new HashSet<String>();
+        Set<String> accDetails = sharedPreferences.getStringSet(username.getText().toString(), new HashSet<String>());
+        if (!accDetails.isEmpty())
+        {
+            showToast("Username already exists, please enter a different username");
+            return;
+        }
         accDetails.add("password\n" + password.getText().toString());
         accDetails.add("name\n" + name.getText().toString());
         accDetails.add("email\n" + email.getText().toString());
